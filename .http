@@ -1,0 +1,34 @@
+@host=http://localhost:8000
+
+GET {{host}}/api/city
+
+###
+POST {{host}}/api/city
+Content-Type: application/json
+
+{
+    "name": "Karaganda"
+}
+
+###
+PUT {{host}}/api/city/1
+Content-Type: application/json
+
+{
+    "name": "Semey"
+}
+
+###
+POST {{host}}/api/employee
+Content-Type: application/json
+
+{
+    "phone": "77777777778",
+    "firstName": "Nursultan",
+    "lastName": "Nazarbayev",
+    "middleName": "Abishuly",
+    "cityID": 1
+}
+
+###
+GET {{host}}/api/employee/1
